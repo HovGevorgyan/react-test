@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+}
+
+.Nav {
+  background: purple;
+}
+
+@media (max-width: 500px) {
+  .Nav {
+    background: yellow;
+  }
+}
