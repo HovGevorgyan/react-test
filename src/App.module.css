@@ -1,13 +1,9 @@
-.App {
-  text-align: center;
-}
+/*@import "Test.css";*/
 
 .Nav {
+  height: 100px;
   background: purple;
+  width: 100%;
 }
 
-@media (max-width: 500px) {
-  .Nav {
-    background: yellow;
-  }
-}
+

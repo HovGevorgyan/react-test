@@ -1,0 +1,17 @@
+.Item {
+    height: 100px;
+    /*width: 370px;*/
+    border: 1px solid black;
+    /*margin-left: 10px;*/
+    text-align: center;
+}
+
+.Test {
+    background-color: red;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

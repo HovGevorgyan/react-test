@@ -1,20 +1,29 @@
 import React, {Component} from 'react';
 import Headroom from 'react-headroom';
+import categories from './components/Categories';
+import {BrowserRouter, Route} from 'react-router-dom';
 
 import classes from './App.module.css';
+import Gallery from './components/Carousel/Test';
+
 
 class App extends Component {
 
     state = {
-        isDesktop: false
+        isDesktop: false,
+        inputValue: '',
     }
 
     handleWindowResize = () => {
-        this.setState({ isDesktop: window.innerWidth >= 375 });
+        this.setState({isDesktop: window.innerWidth >= 500});
     }
 
     componentDidMount() {
         this.handleWindowResize();
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+
     }
 
     render() {
@@ -25,9 +34,12 @@ class App extends Component {
                         {this.state.isDesktop ? 'HEADER' : 'Changed Header'}
                     </div>
                 </Headroom>
-                <div style={{height: '1500px'}}>
 
-                </div>
+
+                <Gallery />
+                <BrowserRouter>
+                    <Route path="/:category" component={categories}/>
+                </BrowserRouter>
             </div>
         )
     }
